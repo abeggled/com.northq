@@ -1,0 +1,129 @@
+{
+  "id": "NQ9021",
+  "name": {
+    "en": "NQ9021 Power Meter",
+    "nl": "NQ9021 krachtmeter",
+    "de": "NQ9021 Stromzähler"
+  },
+  "zwave": {
+    "manufacturerId": 150,
+    "productTypeId": 1,
+    "productId": 1,
+    "productDocumentation": "http://northq.com/wp-content/uploads/2016/11/Q-Power-Specifications.pdf",
+    "pid": 1783,
+    "imageRemotePath": "https://products.z-wavealliance.org/ProductImages/Index?productName=ZC08-11060002",
+    "learnmode": {
+      "image": "/drivers/NQ9021/assets/learnmode.svg",
+      "instruction": {
+        "en": "Press the button on your NQ9021 Power Meter three times",
+        "nl": "Druk driemaal op de knop op de NQ9021 krachtmeter",
+        "de": "Den Knopf am NQ9021 Stromzähler dreimal drücken"
+      }
+    },
+    "unlearnmode": {
+      "image": "/drivers/NAS-WR01ZE/assets/learnmode.svg",
+      "instruction": {
+        "en": "Press the button on your NQ9021 Power Meter three times",
+        "nl": "Druk driemaal op de knop op de NQ9021 krachtmeter",
+        "de": "Den Knopf am NQ9021 Stromzähler dreimal drücken"
+      }
+    },
+    "associationGroups": [],
+    "defaultConfiguration": [
+      {
+        "id": 1,
+        "size": 4,
+        "value": 10000
+      },
+      {
+        "id": 2,
+        "size": 1,
+        "value": 1
+      }
+    ]
+  },
+  "class": "sensor",
+  "capabilities": [
+    "measure_battery",
+    "meter_power"
+  ],
+  "images": {
+    "large": "/drivers/NQ9021/assets/images/large.jpg",
+    "small": "/drivers/NQ9021/assets/images/small.jpg"
+  },
+  "mobile": {
+    "components": [
+      {
+        "id": "icon",
+        "capabilities": [
+          "onoff"
+        ]
+      },
+      {
+        "id": "sensor",
+        "capabilities": [
+          "measure_battery",
+          "meter_power"
+        ]
+      }
+    ]
+  },
+  "settings": [
+    {
+      "id": "pulse_factor",
+      "zwave": {
+        "index": 1,
+        "size": 4
+      },
+      "type": "number",
+      "attr": {
+        "min": 1,
+        "max": 655350
+      },
+      "value": 10000,
+      "label": {
+        "en": "How many pulses*10 per kWh",
+        "nl": "Hoeveel pulsen * 10 per kWh",
+        "de": "Anzahl Pulse * 10 pro kWh"
+      }
+    },
+    {
+      "id": "sensor_type",
+      "zwave": {
+        "index": 2,
+        "size": 1
+      },
+      "type": "dropdown",
+      "label": {
+        "en": "Sensor Type",
+        "nl": "Sensortype",
+        "de": "Sensortyp"
+      },
+      "value": "1",
+      "hint": {
+        "en": "Choose choose your meter type. Default value: Pulse meter",
+        "nl": "Kies uw meter type kiezen. Standaardwaarde: pulsmeter",
+        "de": "Wählen Sie den Stromzählertyp. Standard: Pulsmeter"
+      },
+      "values": [
+        {
+          "id": "1",
+          "label": {
+            "en": "Pulse meter",
+            "nl": "Pulsmeter",
+            "de": "Pulsmeter"
+          }
+        },
+        {
+          "id": "2",
+          "label": {
+            "en": "Mechanical meter",
+            "nl": "Mechanische meter",
+            "de": "Mechanischer Zähler"
+          }
+        }
+      ]
+    }
+  ]
+}
+
