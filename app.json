@@ -6,12 +6,12 @@
     "nl": "NorthQ",
     "de": "NorthQ"
   },
-  "version": "0.0.1",
+  "version": "0.0.2",
   "compatibility": ">=1.5.3",
   "description": {
-    "en": "NorthQ devices for Homey",
-    "nl": "NorthQ apparaten voor Homey",
-    "de": "NorthQ Geräte für Homey"
+    "en": "NorthQ Z-Wave devices for Homey",
+    "nl": "NorthQ Z-Wave apparaten voor Homey",
+    "de": "NorthQ Z-Wave Geräte für Homey"
   },
   "tags": {
     "en": [
@@ -51,7 +51,7 @@
         "title": {
           "en": "The battery alarm turned on",
           "nl": "De batterijwaarschuwing gaat aan",
-          "de":  "Der Batteriealarm wurde eingeschaltet"
+          "de": "Der Batteriealarm wurde eingeschaltet"
         },
         "args": [
           {
@@ -110,7 +110,7 @@
           }
         },
         "unlearnmode": {
-          "image": "/drivers/NAS-WR01ZE/assets/learnmode.svg",
+          "image": "/drivers/NQ9021/assets/learnmode.svg",
           "instruction": {
             "en": "Press the button on your NQ9021 Power Meter three times",
             "nl": "Druk driemaal op de knop op de NQ9021 krachtmeter",
@@ -163,8 +163,8 @@
         }
       ]
   },
-  
-    "settings": [
+
+      "settings": [
         {
           "id": "pulse_factor",
           "zwave": {
@@ -173,12 +173,17 @@
           },
           "type": "number",
           "attr": {
-            "min": 1,
-            "max": 655350
+            "min": 10,
+            "max": 1000000
           },
           "value": 10000,
           "label": {
-            "en": "How many pulses*10 per kWh",
+            "en": "Pulse factor",
+            "nl": "Pulsfactor",
+            "de": "Pulsfaktor"
+          },
+          "hint": {
+            "en": "How many pulses * 10 per kWh",
             "nl": "Hoeveel pulsen * 10 per kWh",
             "de": "Anzahl Pulse * 10 pro kWh"
           }
@@ -219,7 +224,31 @@
               }
             }
           ]
+        },
+        {
+          "id": "pulse_count",
+          "zwave": {
+            "index": 9,
+            "size": 4
+          },
+          "type": "number",
+          "attr": {
+            "min": 0,
+            "max": 2147483647
+          },
+          "value": 0,
+          "label": {
+            "en": "Total number of pulses",
+            "nl": "Totaal aantal pulsen",
+            "de": "Total Anzahl Pulse"
+          },
+          "hint": {
+            "en": "Use this register to set the total meter consumption. In order for the Power Reader to report the proper total meter consumption, the value for this registered has to be initialized with meter value * impulse factor.",
+            "nl": "Gebruik dit register om het totale meterverbruik in te stellen. Om ervoor te zorgen dat de krachtmeter het juiste totale verbruik van de meter rapporteert, moet de waarde voor dit geregistreerde apparaat worden geïnitialiseerd met de waarde * impulsimpuls.",
+            "de": "Verwenden Sie dieses Register, um den Gesamtverbrauch des Zählers einzustellen. Damit der Stromzähler den korrekten Gesamtverbrauch des Zählers meldet, muss der Wert für dieses Register mit dem Zählerwert * Impulsfaktor initialisiert werden."
+          }
         }
+
       ]
     }
   ]
