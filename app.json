@@ -6,7 +6,7 @@
     "nl": "NorthQ",
     "de": "NorthQ"
   },
-  "version": "0.0.2",
+  "version": "0.0.3",
   "compatibility": ">=1.5.3",
   "description": {
     "en": "NorthQ Z-Wave devices for Homey",
@@ -183,9 +183,9 @@
             "de": "Pulsfaktor"
           },
           "hint": {
-            "en": "How many pulses * 10 per kWh",
-            "nl": "Hoeveel pulsen * 10 per kWh",
-            "de": "Anzahl Pulse * 10 pro kWh"
+            "en": "How many pulses * 10 per kWh (min 10, max 1000000",
+            "nl": "Hoeveel pulsen * 10 per kWh (min 10, max 1000000",
+            "de": "Anzahl Pulse * 10 pro kWh (min 10, max 1000000"
           }
         },
         {
@@ -243,12 +243,11 @@
             "de": "Total Anzahl Pulse"
           },
           "hint": {
-            "en": "Use this register to set the total meter consumption. In order for the Power Reader to report the proper total meter consumption, the value for this registered has to be initialized with meter value * impulse factor.",
+            "en": "Use this register to set the total meter consumption. In order for the Power Reader to report the proper total meter consumption, the value for this register has to be initialized with meter value * impulse factor.",
             "nl": "Gebruik dit register om het totale meterverbruik in te stellen. Om ervoor te zorgen dat de krachtmeter het juiste totale verbruik van de meter rapporteert, moet de waarde voor dit geregistreerde apparaat worden geïnitialiseerd met de waarde * impulsimpuls.",
             "de": "Verwenden Sie dieses Register, um den Gesamtverbrauch des Zählers einzustellen. Damit der Stromzähler den korrekten Gesamtverbrauch des Zählers meldet, muss der Wert für dieses Register mit dem Zählerwert * Impulsfaktor initialisiert werden."
           }
         }
-
       ]
     }
   ]
