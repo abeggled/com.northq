@@ -15,6 +15,9 @@ NQ-9021, Power Reader
 
 ## Change Log:
 
+### v 0.0.5
+Fixed mesh-driver issue (https://github.com/abeggled/com.northq/issues/1)
+
 ### v 0.0.4
 Fixed minor issues
 
