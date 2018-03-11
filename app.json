@@ -6,7 +6,7 @@
     "nl": "NorthQ",
     "de": "NorthQ"
   },
-  "version": "0.0.3",
+  "version": "0.0.5",
   "compatibility": ">=1.5.3",
   "description": {
     "en": "NorthQ Z-Wave devices for Homey",
@@ -25,7 +25,7 @@
     ]
   },
   "category": [
-    "appliances"
+    "energy"
   ],
   "images": {
     "large": "/assets/images/large.jpg",
