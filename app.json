@@ -6,7 +6,7 @@
     "nl": "NorthQ",
     "de": "NorthQ"
   },
-  "version": "0.0.3",
+  "version": "0.0.4",
   "compatibility": ">=1.5.3",
   "description": {
     "en": "NorthQ Z-Wave devices for Homey",

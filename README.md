@@ -15,6 +15,9 @@ NQ-9021, Power Reader
 
 ## Change Log:
 
+### v 0.0.4
+Fixed minor issues
+
 ### v 0.0.3
 Initial Alpha Release
 
