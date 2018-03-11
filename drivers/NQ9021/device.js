@@ -5,8 +5,8 @@ const ZwaveDevice = require('homey-meshdriver').ZwaveDevice;
 
 class PowerMeter_NQ9021 extends ZwaveDevice {
     onMeshInit() {
-        this.enableDebug();
-        this.printNode();
+        //this.enableDebug();
+        //this.printNode();
         this.registerCapability('measure_battery', 'BATTERY', {
             getOpts: {
                 getOnOnline: true,
