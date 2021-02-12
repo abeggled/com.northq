@@ -12,6 +12,9 @@ NQ-9021, Power Reader
 * German
 
 ## NOTE:
+IMPORTANT NOTICE
+Starting in May 2020 I don't own a Homey anymore
+I can't support the App or fix bugs.
 
 ## Change Log:
 
